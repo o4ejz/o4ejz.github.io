@@ -11,22 +11,21 @@
 
 <br>
 
-<p style="font-size:20px; background:#fff0f5; padding:8px; width:300px; border:3px ridge hotpink;">
-  あなたは <span id="counter" style="color:red; font-weight:bold;">0</span> 人目のおきゃくさまです♪
-</p>
+<hr>
+
+<div id="counter" style="font-size:24px; font-weight:bold;">
+  訪問者数：読み込み中…
+</div>
 
 <script>
-let count = localStorage.getItem("fu_counter");
-
-if (!count) {
-  count = 0;
-}
-
-count = parseInt(count) + 1;
-localStorage.setItem("fu_counter", count);
-
-document.getElementById("counter").innerText = count;
+fetch("https://api.countapi.xyz/hit/o4ejz-github-io/home")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("counter").innerText =
+      "訪問者数：" + data.value + " 人目のお客さま♡";
+  });
 </script>
+
 
 
 <br><br>
