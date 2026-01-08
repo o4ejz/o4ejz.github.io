@@ -9,29 +9,10 @@
 
 </table>
 
-<br>
-
-<hr>
-
-<div id="counter" style="font-size:24px; font-weight:bold;">
-  訪問者数：読み込み中…
-</div>
-
-<script>
-fetch("https://api.countapi.xyz/hit/o4ejz-github-io/home")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("counter").innerText =
-      "訪問者数：" + data.value + " 人目のお客さま♡";
-  });
-</script>
-
-
-
 <br><br>
 
 <form>
-ひとことどうぞ♪キリ番踏み逃げしないでね😾<br>
+ひとことどうぞ♪<br>
 <input type="text" size="30">
 <input type="submit" value="送信">
 </form>
