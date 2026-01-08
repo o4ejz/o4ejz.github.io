@@ -1,10 +1,41 @@
-<body style="
-  background-image: url('back.jpg');
-  background-repeat: repeat;
-  background-size: 200px 200px;
-">
+<body style="background-image:url('back.jpg'); background-repeat:repeat; background-size:200px 200px;">
 <center>
-<marquee>★★★ 阜のほーむぺーじへようこそ！！ ★★★</marquee>
-<p>厄介していってね♪♪♪</p>
+
+<marquee>★☆★ 阜のほーむぺーじへようこそ！！ ★☆★</marquee>
+
+<table border="3" width="60%" bgcolor="#fff0f5">
+<tr><th colspan="2">★こうしんりれき★</th></tr>
+<tr><td>2026/01/08</td><td>ほーむぺーじ　開設！</td></tr>
+
+</table>
+
+<br>
+
+<p style="font-size:20px; background:#fff0f5; padding:8px; width:300px; border:3px ridge hotpink;">
+  あなたは <span id="counter" style="color:red; font-weight:bold;">0</span> 人目のおきゃくさまです♪
+</p>
+
+<script>
+let count = localStorage.getItem("fu_counter");
+
+if (!count) {
+  count = 0;
+}
+
+count = parseInt(count) + 1;
+localStorage.setItem("fu_counter", count);
+
+document.getElementById("counter").innerText = count;
+</script>
+
+
+<br><br>
+
+<form>
+ひとことどうぞ♪<br>
+<input type="text" size="30">
+<input type="submit" value="送信">
+</form>
+
 </center>
 </body>
